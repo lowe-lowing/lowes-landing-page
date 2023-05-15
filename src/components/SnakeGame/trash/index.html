@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Snake</h1>
+    <div id="MainMenu">
+        <h2>Main Menu</h2>
+        <button onclick="NewGame()"><h3>New Game</h3></button>
+        <br><br>
+        <div>
+            Borders:
+            <button onclick="changeGamemode(0)" id="diff2">Disabled</button>
+            <button onclick="changeGamemode(1)" id="diff2" class="active2">Enabled</button>
+        </div>
+        <br>
+        <div>
+            difficulty:
+            <button onclick="changeDifficulty(5)" id="diff">easy</button>
+            <button onclick="changeDifficulty(10)" id="diff" class="active">medium</button>
+            <button onclick="changeDifficulty(15)" id="diff" >hard</button>
+        </div>
+        
+    </div>
+    <canvas id="game" width="400" height="400"></canvas>
+    <div class="pauseMenu">
+        <h2>Paused</h2>
+        <button onclick="resume()" style="margin-bottom: 10px;"><h3>Resume</h3></button><br>
+        <button onclick="location.reload();"><h3>Main Menu</h3></button>
+    </div>
+    <div class="RestartBtn">
+        <button onclick="NewGame();" style="margin: 10px 10px;"><h3>Restart</h3></button><br>
+        <button onclick="location.reload();"><h3>Main Menu</h3></button>
+    </div>
+
+    <div><h3>HighScore: <span id="HighScore"></span></h3></div> 
+    
+    <div id="mySidenav" class="sidenav">
+        <h1>Controls</h1>
+        <h3>Arrow keys to move</h3>
+        <h3>Esc to pause</h3>
+      </div>
+
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="script.js"></script>
+    
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
