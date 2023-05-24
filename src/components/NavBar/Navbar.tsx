@@ -16,6 +16,17 @@ export const Navbar = () => {
     };
   }
 
+  const setSection = () => {
+    const sections = document.querySelectorAll("section");
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      const sectionBottom = sectionTop + section.offsetHeight;
+      if (window.scrollY >= sectionTop - 30 && window.scrollY <= sectionBottom - 10) {
+        setActiveSectionId(section.id);
+      }
+    });
+  };
+
   useEffect(() => {
     const handleScroll = debounce(() => {
       if (scrollingTo) {
@@ -23,14 +34,7 @@ export const Navbar = () => {
         setScrollingTo(null);
         router.replace(`#${scrollingTo}`, undefined, { scroll: false });
       } else {
-        const sections = document.querySelectorAll("section");
-        sections.forEach((section) => {
-          const sectionTop = section.offsetTop;
-          const sectionBottom = sectionTop + section.offsetHeight;
-          if (window.scrollY >= sectionTop - 30 && window.scrollY <= sectionBottom - 10) {
-            setActiveSectionId(section.id);
-          }
-        });
+        setSection();
       }
     }, 25);
     window.addEventListener("scroll", handleScroll);
@@ -38,18 +42,23 @@ export const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [scrollingTo]);
 
+  useEffect(() => {
+    setSection();
+  }, []);
+
   return (
-    <nav className="h-12 text-primary flex flex-row justify-center items-center gap-5 fixed top-0 w-[100%] bg-primary z-10">
-      <NavLink title="About Me" href="#AboutMe" activeSectionId={activeSectionId} setScrollingTo={setScrollingTo} />
-      <NavLink title="Projects" href="#Projects" activeSectionId={activeSectionId} setScrollingTo={setScrollingTo} />
-      <NavLink title="Carreer" href="#Carreer" activeSectionId={activeSectionId} setScrollingTo={setScrollingTo} />
-      <NavLink title="Fun Game" href="#Game" activeSectionId={activeSectionId} setScrollingTo={setScrollingTo} />
-      <NavLink title="Contact" href="#Contact" activeSectionId={activeSectionId} setScrollingTo={setScrollingTo} />
+    <nav className="flex justify-center fixed top-0 w-[100%] z-10 navbar">
+      <div className="bg-primary flex flex-row justify-center items-center gap-5 h-12 text-primary w-auto pr-5 pl-5 shadow-primary shadow-sm">
+        <NavLink title="About Me" href="#AboutMe" activeSectionId={activeSectionId} setScrollingTo={setScrollingTo} />
+        <NavLink title="Projects" href="#Projects" activeSectionId={activeSectionId} setScrollingTo={setScrollingTo} />
+        <NavLink title="Carreer" href="#Carreer" activeSectionId={activeSectionId} setScrollingTo={setScrollingTo} />
+        <NavLink title="Fun Game" href="#Game" activeSectionId={activeSectionId} setScrollingTo={setScrollingTo} />
+        <NavLink title="Contact" href="#Contact" activeSectionId={activeSectionId} setScrollingTo={setScrollingTo} />
+      </div>
     </nav>
   );
 };
 
-// props
 type NavLinkProps = {
   title: string;
   href: string;

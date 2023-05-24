@@ -152,11 +152,12 @@ html::-webkit-scrollbar-thumb:hover {
   align-items: center;
   justify-content: center;
   margin-top: -3em;
+  position: relative;
 }
 
 .titles div {
   font-size: 2.1em;
-  color: #61DAFB;
+  color: var(--primary-color);
   display: flex;
   flex-direction: row;
 }
@@ -320,3 +321,85 @@ html::-webkit-scrollbar-thumb:hover {
   }
 }
 /* end of headline component css */
+
+/* Navbar */
+.navbar, .animate-fade-in {
+  -webkit-animation: fadein 2s forwards;
+  -moz-animation: fadein 2s forwards;
+  -ms-animation: fadein 2s forwards;
+  -o-animation: fadein 2s forwards;
+  animation: fadein 2s forwards;
+  animation-delay: 3s;
+  opacity: 0;
+}
+.navbar > div {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+/* Navbar */
+
+/* Custom Button */
+.custom_button {
+  appearance: button;
+  background-color: var(--primary-color);
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  line-height: 20px;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 13px 19px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+ }
+ 
+ .custom_button:after {
+  background-clip: padding-box;
+  background-color: var(--primary-color);
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+ }
+ 
+ .custom_button:main, .custom_button:focus {
+  user-select: auto;
+ }
+ 
+ .custom_button:hover:not(:disabled) {
+  filter: brightness(1.1);
+ }
+ 
+ .custom_button:disabled {
+  cursor: auto;
+ }
+ 
+ .custom_button:active:after {
+  border-width: 0 0 0px;
+ }
+ 
+ .custom_button:active {
+  padding-bottom: 10px;
+ }
+/* Custom Button */

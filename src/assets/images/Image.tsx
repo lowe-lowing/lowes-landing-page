@@ -3,11 +3,21 @@ import Image, { ImageProps } from "next/image";
 import CVPicture from "./CVPicture.jpg";
 import LowesWorkouts from "./lowes-workouts.png";
 import HittaUppkorning from "./hitta-uppkorning.png";
+import Forum from "./forum.png";
+import LowesEcommerce from "./lowes-ecommerce.png";
+import Lyricsflow from "./lyricsflow.png";
+import YoutubeSearch from "./youtube-search.png";
+import MovieApp from "./MovieApp.png";
 
 const Images = {
   LowesWorkouts: LowesWorkouts,
   CVPicture: CVPicture,
   HittaUppkorning: HittaUppkorning,
+  Forum: Forum,
+  LowesEcommerce: LowesEcommerce,
+  Lyricsflow: Lyricsflow,
+  YoutubeSearch: YoutubeSearch,
+  MovieApp: MovieApp,
 };
 
 export type ImageType = keyof typeof Images;

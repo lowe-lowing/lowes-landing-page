@@ -67,11 +67,9 @@ export const Canvas: React.FC<CanvasProps> = ({ canvasRef, game, setGame, gameSe
 
   const setGameOver = () => {
     const currentHighScore = localStorage.getItem("highScore");
-    if (currentHighScore) {
-      if (game.score > parseInt(currentHighScore)) {
-        localStorage.setItem("highScore", game.score.toString());
-        setHighScore(game.score);
-      }
+    if (game.score > parseInt(currentHighScore || "0")) {
+      localStorage.setItem("highScore", game.score.toString());
+      setHighScore(game.score);
     }
     setGame((prev) => (prev ? { ...prev, gameOver: true } : null));
   };
@@ -228,10 +226,17 @@ export const Canvas: React.FC<CanvasProps> = ({ canvasRef, game, setGame, gameSe
       appleAudio.play();
       let newAppleX = appleX;
       let newAppleY = appleY;
-      while (appleX === newAppleX && appleY === newAppleY && appleX === headX && appleY === headY) {
+      // this only checks if the apple is on the same position as before and as the snake head
+      while (
+        appleX === newAppleX &&
+        appleY === newAppleY &&
+        appleX === headX &&
+        appleY === headY &&
+        !snakeTail.some((part) => part.x === newAppleX && part.y === newAppleY)
+      ) {
         newAppleX = Math.floor(Math.random() * tileCount);
         newAppleY = Math.floor(Math.random() * tileCount);
-        if (snakeTail.some((part) => part.x !== newAppleX && part.y !== newAppleY)) {
+        if (!snakeTail.some((part) => part.x === newAppleX && part.y === newAppleY)) {
           setApple({ x: newAppleX, y: newAppleY });
         }
       }

@@ -10,6 +10,13 @@ import expo from "./expo-1.svg";
 import nodejs from "./nodejs-icon.svg";
 import AppStore from "./aivalable-on-the-app-store-2.svg";
 import GooglePlay from "./get-it-on-google-play.svg";
+import Sanity from "./sanity.png";
+import Stripe from "./stripe.svg";
+import Php from "./php1.svg";
+import Javascript from "./javascript.svg";
+import Redux from "./redux.svg";
+import sweden from "./sweden.svg";
+import usa from "./usa-flag-1.svg";
 
 const Icons = {
   Typescript: Typescript,
@@ -22,6 +29,13 @@ const Icons = {
   Nodejs: nodejs,
   AppStore: AppStore,
   GooglePlay: GooglePlay,
+  Sanity: Sanity,
+  Stripe: Stripe,
+  Php: Php,
+  Javascript: Javascript,
+  Redux: Redux,
+  Sweden: sweden,
+  Usa: usa,
 };
 
 export type IconType = keyof typeof Icons;

@@ -55,41 +55,7 @@ export const Game: FC = () => {
         <div className="underline">Controls</div>
         <div className="text-sm">Arrow keys to move</div>
         <div className="text-sm mb-2">Esc to pause</div>
-        {(!game || game.gameOver) && (
-          <>
-            <div className="flex flex-row gap-1">
-              <p>Difficulty:</p>
-              <button
-                onClick={changeDifficulty(Difficulty.Easy)}
-                className={gameSettings.difficulty === Difficulty.Easy ? "text-green-300" : ""}
-              >
-                Easy
-              </button>
-              <button
-                onClick={changeDifficulty(Difficulty.Medium)}
-                className={gameSettings.difficulty === Difficulty.Medium ? "text-green-300" : ""}
-              >
-                Medium
-              </button>
-              <button
-                onClick={changeDifficulty(Difficulty.Hard)}
-                className={gameSettings.difficulty === Difficulty.Hard ? "text-green-300" : ""}
-              >
-                Hard
-              </button>
-            </div>
-            <div className="flex flex-row gap-1">
-              <p>Borders: </p>
-              <input type="checkbox" checked={gameSettings.borders} onChange={toggleBorders} />
-            </div>
-          </>
-        )}
-        {!game && (
-          <button onClick={NewGame} className="text-lg">
-            New Game
-          </button>
-        )}
-        <div>HighScore: {highScore}</div>
+        <div>Highscore: {highScore}. Can you beat my highscore of 45?</div>
         <br />
       </div>
       <div className="relative">
@@ -102,7 +68,38 @@ export const Game: FC = () => {
             setHighScore={setHighScore}
           />
         ) : (
-          <div className="w-[400px] h-[400px] bg-black" />
+          <div className="w-[400px] h-[400px] bg-black flex flex-col justify-center items-center">
+            <div className="bg-slate-400 flex flex-col justify-center items-center p-5 text-white">
+              <div className="flex flex-row gap-1">
+                <p>Difficulty:</p>
+                <button
+                  onClick={changeDifficulty(Difficulty.Easy)}
+                  className={gameSettings.difficulty === Difficulty.Easy ? "text-green-300" : ""}
+                >
+                  Easy
+                </button>
+                <button
+                  onClick={changeDifficulty(Difficulty.Medium)}
+                  className={gameSettings.difficulty === Difficulty.Medium ? "text-green-300" : ""}
+                >
+                  Medium
+                </button>
+                <button
+                  onClick={changeDifficulty(Difficulty.Hard)}
+                  className={gameSettings.difficulty === Difficulty.Hard ? "text-green-300" : ""}
+                >
+                  Hard
+                </button>
+              </div>
+              <div className="flex flex-row gap-1">
+                <p>Borders: </p>
+                <input type="checkbox" checked={gameSettings.borders} onChange={toggleBorders} />
+              </div>
+              <button onClick={NewGame} className="text-lg">
+                New Game
+              </button>
+            </div>
+          </div>
         )}
         {game && game?.paused && (
           <div className="absolute top-0 text-white flex flex-col justify-center items-center w-[100%] h-[100%]">

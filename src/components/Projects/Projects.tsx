@@ -34,7 +34,7 @@ export const Projects: React.FC = () => {
               onClick={() => setPage(pageNumber)}
               disabled={currentPage === pageNumber}
               className={`${
-                currentPage === pageNumber ? "border-secondary text-secondary" : "border-primary text-primary"
+                currentPage === pageNumber ? "border-primary text-primary" : "border-secondary text-secondary"
               } border-[1px] rounded-full h-8 w-8 flex items-center justify-center`}
             >
               {pageNumber}

@@ -8,7 +8,7 @@ import { useRouter } from "next/router";
 export const Contact: React.FC = () => {
   return (
     <section id="Contact" className="text-primary w-full mt-10">
-      <footer className="flex flex-col items-center text-white bg-slate-500 w-full pb-20">
+      <footer className="flex flex-col items-center text-white bg-secondary w-full pb-20">
         <Title>Contact</Title>
         <div className="w-[50%] grid grid-cols-2">
           <div className="flex flex-col gap-2">
