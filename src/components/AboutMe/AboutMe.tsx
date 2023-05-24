@@ -13,9 +13,11 @@ export const AboutMe: React.FC = () => {
           <div className="text-primary">
             <div className="text-2xl underline mb-2">Fullstack Developer</div>
             <div>
+              {`
               Lived in Åkersberga, Stockholm, Sweden with family since 2009. Likes to keep fit and socialize with people
               whenever I get the chance. Has a burning passion in solving problems and simplifying people's lives with
               high-quality, functional, and visually appealing digital solutions.
+            `}
             </div>
             <br />
             <div>
