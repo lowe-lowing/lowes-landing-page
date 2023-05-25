@@ -5,10 +5,10 @@ import { IconRenderer } from "@/assets/icons/Icon";
 import { downloadPDF } from "@/utils/downloadPdf";
 import { Button } from "../ui/Button";
 
-export const Carreer = () => {
+export const Career = () => {
   return (
-    <section className="flex flex-col items-center pt-10" id="Carreer">
-      <Title>Carreer</Title>
+    <section className="flex flex-col items-center pt-10" id="Career">
+      <Title>Career</Title>
       <div className="text-primary w-[50%] bg-secondary p-5 rounded-xl">
         <div className="grid grid-cols-right-auto gap-10">
           <div className="flex flex-col gap-4">

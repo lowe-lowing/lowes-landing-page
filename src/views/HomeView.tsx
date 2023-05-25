@@ -1,4 +1,4 @@
-import { AboutMe, Carreer, Contact, Projects, SnakeGame } from "@/components";
+import { AboutMe, Career, Contact, Projects, SnakeGame } from "@/components";
 import { Navbar } from "@/components/NavBar";
 import { FC } from "react";
 
@@ -9,7 +9,7 @@ export const HomeView: FC = () => {
       <AboutMe />
       <div className="flex flex-col">
         <Projects />
-        <Carreer />
+        <Career />
         <SnakeGame />
         <Contact />
       </div>

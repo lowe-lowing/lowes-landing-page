@@ -24,7 +24,7 @@ export const Card: React.FC<CardProps> = ({ project }) => {
       <div className="flex justify-end w-full">
         {project.type === LinkType.Link && (
           <button className="text-primary flex items-center gap-1" onClick={() => OpenInNewTab(project.link)}>
-            Goto <FaArrowRight />
+            Go to <FaArrowRight />
           </button>
         )}
         {project.type === LinkType.Buttons && (
