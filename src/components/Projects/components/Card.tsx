@@ -10,7 +10,7 @@ interface CardProps {
 
 export const Card: React.FC<CardProps> = ({ project }) => {
   return (
-    <div className="bg-card flex flex-col items-center p-3 gap-3 rounded-lg hover:scale-[1.02] transition-all h-min">
+    <div className="bg-slate-700 shadow-black card-shadow flex flex-col items-center p-3 gap-3 rounded-lg hover:scale-[1.02] transition-all h-min">
       <div className="text-2xl whitespace-nowrap text-primary">{project.title}</div>
       <ImageRenderer src={project.image} alt={project.title} width={300} height={300} className="rounded-lg" />
       <div className="w-full">
