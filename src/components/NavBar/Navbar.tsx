@@ -51,7 +51,7 @@ export const Navbar = () => {
       <div className="bg-primary flex flex-row justify-center items-center gap-5 h-12 text-primary w-auto pr-5 pl-5 shadow-primary shadow-sm">
         <NavLink title="About Me" href="#AboutMe" activeSectionId={activeSectionId} setScrollingTo={setScrollingTo} />
         <NavLink title="Projects" href="#Projects" activeSectionId={activeSectionId} setScrollingTo={setScrollingTo} />
-        <NavLink title="Carreer" href="#Carreer" activeSectionId={activeSectionId} setScrollingTo={setScrollingTo} />
+        <NavLink title="Career" href="#Career" activeSectionId={activeSectionId} setScrollingTo={setScrollingTo} />
         <NavLink title="Fun Game" href="#Game" activeSectionId={activeSectionId} setScrollingTo={setScrollingTo} />
         <NavLink title="Contact" href="#Contact" activeSectionId={activeSectionId} setScrollingTo={setScrollingTo} />
       </div>
