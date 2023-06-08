@@ -14,7 +14,7 @@ export const SplitText: FC<HeadlineProps> = ({ animationDelay, copy, role }) => 
           animationDelay: animationDelay + index * 0.1 + "s",
         };
         return (
-          <p key={index} style={style}>
+          <p key={index} style={style} className="title-media">
             {char !== " " ? char : "\u00A0"}
           </p>
         );

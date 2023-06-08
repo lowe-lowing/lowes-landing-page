@@ -7,10 +7,10 @@ import { useRouter } from "next/router";
 
 export const Contact: React.FC = () => {
   return (
-    <section id="Contact" className="text-primary w-full mt-10">
-      <footer className="flex flex-col items-center text-white bg-secondary w-full pb-20">
+    <section id="Contact" className="text-primary mt-10">
+      <footer className="flex flex-col items-center text-white bg-secondary pb-20 max-sm:pb-10">
         <Title>Contact</Title>
-        <div className="w-[50%] grid grid-cols-2">
+        <div className="w-[50%] grid grid-cols-2 max-sm:w-[90%] flex-col max-sm:flex max-sm:gap-5">
           <div className="flex flex-col gap-2">
             <ContactButton
               href="mailto:lowe.lowing@gmail.com"

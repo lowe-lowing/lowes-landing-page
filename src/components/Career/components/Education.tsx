@@ -11,8 +11,8 @@ type Props = {
 export const Education: React.FC<Props> = ({ school, degree, dateDisplay, description, place }) => {
   return (
     <div>
-      <div className="text-lg">
-        <span className="font-bold">{school}</span>, {place} - <span className="font-">{degree}</span>
+      <div className="text-lg whitespace-nowrap">
+        <span className="font-bold">{school}</span>, {place} - <span className="">{degree}</span>
       </div>
       <div className="text-xs">{dateDisplay}</div>
       <div className="text-base">{description}</div>

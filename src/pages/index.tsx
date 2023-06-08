@@ -15,6 +15,8 @@ export default function Home() {
     <>
       <Head>
         <title>Lowe Löwing</title>
+        <meta name="description" content="Lowe Löwing's personal website" />
+        <meta name="viewport" content="width=device-width" />
       </Head>
       <HomeView />
     </>

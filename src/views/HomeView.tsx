@@ -7,12 +7,10 @@ export const HomeView: FC = () => {
     <>
       <Navbar />
       <AboutMe />
-      <div className="flex flex-col">
-        <Projects />
-        <Career />
-        <SnakeGame />
-        <Contact />
-      </div>
+      <Projects />
+      <Career />
+      <SnakeGame />
+      <Contact />
     </>
   );
 };
