@@ -29,7 +29,7 @@ export type Project = Shared &
 export const projects: Project[] = [
   {
     type: LinkType.Link,
-    title: "Lowes Workouts",
+    title: "Gym System",
     description:
       "Lowes Workouts is a web application built using Next.js, MySQL, and Tailwind CSS. It is designed to help gym owners list and manage their workout lessons online. With Lowes Workouts, gym owners can create and schedule custom lessons, making it easy for their clients to find and sign up for the classes they want.",
     image: "LowesWorkouts",
@@ -72,7 +72,7 @@ export const projects: Project[] = [
   },
   {
     type: LinkType.Link,
-    title: "Instagram Copy",
+    title: "Instagram Clone",
     description:
       "A copy of the Instagram app built using React Native, Expo and Firebase for login, database and file storage. In this project I greatly increased my knowledge of Firebase but also how to integrate different views with React Native. The app has many features but can be further worked on.",
     image: "Forum",
@@ -87,7 +87,7 @@ export const projects: Project[] = [
   },
   {
     type: LinkType.Link,
-    title: "Lowes Ecommerce",
+    title: "Ecommerce Site",
     description:
       "This is an Ecommerce website where you can buy products for listening to music. It is built with Next.js, sanity cms and stipe for payments with a functional cart, payment and review system. Here I learned how to integrate a cms but also more about Next.js. The products are fake to showcase how it would look like if it was a real website.",
     image: "LowesEcommerce",
@@ -113,7 +113,7 @@ export const projects: Project[] = [
   },
   {
     type: LinkType.Link,
-    title: "Youtube Search",
+    title: "Youtube Search Site",
     description:
       "The page uses Youtube's REST Api and Redux as well as tailwind for css, which I think helps a lot when it comes to creating a stylish design. One of my many projects but really fun to create because of tailwind. The page is uploaded via github pages.",
     image: "YoutubeSearch",
@@ -126,7 +126,7 @@ export const projects: Project[] = [
   },
   {
     type: LinkType.Link,
-    title: "Movie Website",
+    title: "Movie Site",
     description:
       "A page that uses the OMDb API with axios and state management with Redux. In a project like this redux is probably not necessary, but in larger pruducts redux is very useful. It helped me increase my understanding for state management and using redux. The page is uploaded on vercel.",
     image: "MovieApp",
