@@ -9,30 +9,33 @@ export const DowloadCVButtons: FC = () => {
   const [downloadingPdf, setDownloadingPdf] = useState<ResumeEnum | false>(false);
 
   const downloadPDF = async (resume: ResumeData) => {
-    setDownloadingPdf(resume.id);
+    const res = await fetch("/api/test").then((res) => res.json());
+    console.log(res);
 
-    const payload: ResumeRequest = {
-      id: resume.id,
-    };
-    const { data } = await axios.post<Buffer>("/api/resume", payload, {
-      responseType: "arraybuffer", // Ensure the response is treated as an ArrayBuffer
-    });
+    // setDownloadingPdf(resume.id);
 
-    const pdfBlob = new Blob([data], { type: "application/pdf" });
-    const pdfUrl = URL.createObjectURL(pdfBlob);
+    // const payload: ResumeRequest = {
+    //   id: resume.id,
+    // };
+    // const { data } = await axios.post<Buffer>("/api/resume", payload, {
+    //   responseType: "arraybuffer", // Ensure the response is treated as an ArrayBuffer
+    // });
 
-    const downloadLink = document.createElement("a");
-    downloadLink.href = pdfUrl;
-    downloadLink.download = resume.fileName; // Set the desired filename
-    downloadLink.style.display = "none";
+    // const pdfBlob = new Blob([data], { type: "application/pdf" });
+    // const pdfUrl = URL.createObjectURL(pdfBlob);
 
-    document.body.appendChild(downloadLink);
-    downloadLink.click();
+    // const downloadLink = document.createElement("a");
+    // downloadLink.href = pdfUrl;
+    // downloadLink.download = resume.fileName; // Set the desired filename
+    // downloadLink.style.display = "none";
 
-    // Clean up by revoking the temporary URL after the download has started
-    URL.revokeObjectURL(pdfUrl);
+    // document.body.appendChild(downloadLink);
+    // downloadLink.click();
 
-    setDownloadingPdf(false);
+    // // Clean up by revoking the temporary URL after the download has started
+    // URL.revokeObjectURL(pdfUrl);
+
+    // setDownloadingPdf(false);
   };
 
   return (
