@@ -9,33 +9,33 @@ export const DowloadCVButtons: FC = () => {
   const [downloadingPdf, setDownloadingPdf] = useState<ResumeEnum | false>(false);
 
   const downloadPDF = async (resume: ResumeData) => {
-    const res = await fetch("/api/test").then((res) => res.json());
-    console.log(res);
+    // const res = await fetch("/api/test").then((res) => res.json());
+    // console.log(res);
 
-    // setDownloadingPdf(resume.id);
+    setDownloadingPdf(resume.id);
 
-    // const payload: ResumeRequest = {
-    //   id: resume.id,
-    // };
-    // const { data } = await axios.post<Buffer>("/api/resume", payload, {
-    //   responseType: "arraybuffer", // Ensure the response is treated as an ArrayBuffer
-    // });
+    const payload: ResumeRequest = {
+      id: resume.id,
+    };
+    const { data } = await axios.post<Buffer>("/api/resume", payload, {
+      responseType: "arraybuffer", // Ensure the response is treated as an ArrayBuffer
+    });
 
-    // const pdfBlob = new Blob([data], { type: "application/pdf" });
-    // const pdfUrl = URL.createObjectURL(pdfBlob);
+    const pdfBlob = new Blob([data], { type: "application/pdf" });
+    const pdfUrl = URL.createObjectURL(pdfBlob);
 
-    // const downloadLink = document.createElement("a");
-    // downloadLink.href = pdfUrl;
-    // downloadLink.download = resume.fileName; // Set the desired filename
-    // downloadLink.style.display = "none";
+    const downloadLink = document.createElement("a");
+    downloadLink.href = pdfUrl;
+    downloadLink.download = resume.fileName; // Set the desired filename
+    downloadLink.style.display = "none";
 
-    // document.body.appendChild(downloadLink);
-    // downloadLink.click();
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
 
-    // // Clean up by revoking the temporary URL after the download has started
-    // URL.revokeObjectURL(pdfUrl);
+    // Clean up by revoking the temporary URL after the download has started
+    URL.revokeObjectURL(pdfUrl);
 
-    // setDownloadingPdf(false);
+    setDownloadingPdf(false);
   };
 
   return (

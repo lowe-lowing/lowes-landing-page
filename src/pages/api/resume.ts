@@ -6,15 +6,10 @@ import { ResumeValidator } from "@/utils/ResumeValidator";
 const scopes = ["https://www.googleapis.com/auth/drive"];
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse<Buffer>) {
-  console.log(process.env.CLIENT_EMAIL);
+  const private_key = Buffer.from(process.env.PRIVATE_KEY as string, "base64").toString("utf8");
 
   try {
-    const auth = new google.auth.JWT(
-      process.env.CLIENT_EMAIL,
-      undefined,
-      process.env.PRIVATE_KEY!.split(String.raw`\n`).join("\n"),
-      scopes
-    );
+    const auth = new google.auth.JWT(process.env.CLIENT_EMAIL, undefined, private_key, scopes);
     const drive = google.drive({ version: "v3", auth });
     const { id } = ResumeValidator.parse(req.body);
     const cv = await drive.files.export(
