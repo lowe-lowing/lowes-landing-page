@@ -1,12 +1,13 @@
 import React, { ButtonHTMLAttributes, FC } from "react";
+import { twMerge } from "tailwind-merge";
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
-  additionalClassName?: string;
+  className?: string;
 }
-export const Button: FC<Props> = ({ children, additionalClassName, ...props }) => {
+export const Button: FC<Props> = ({ children, className, ...props }) => {
   return (
-    <button className={`custom_button ${additionalClassName}`} {...props}>
+    <button className={twMerge("custom_button", className)} {...props}>
       {children}
     </button>
   );
