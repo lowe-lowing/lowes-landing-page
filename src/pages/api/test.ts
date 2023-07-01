@@ -3,7 +3,8 @@ import type { NextApiRequest, NextApiResponse } from "next";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse<any>) {
   res.json({
-    a: process.env.CLIENT_EMAIL,
-    b: process.env.PRIVATE_KEY,
+    name: "John Doe",
+    // a: process.env.CLIENT_EMAIL,
+    // b: process.env.PRIVATE_KEY,
   });
 }
