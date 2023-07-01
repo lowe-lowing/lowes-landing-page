@@ -9,17 +9,18 @@ export const DowloadCVButtons: FC = () => {
   const [downloadingPdf, setDownloadingPdf] = useState<ResumeEnum | false>(false);
 
   const downloadPDF = async (resume: ResumeData) => {
-    // const res = await fetch("/api/test").then((res) => res.json());
-    // console.log(res);
-
     setDownloadingPdf(resume.id);
 
     const payload: ResumeRequest = {
       id: resume.id,
     };
-    const { data } = await axios.post<Buffer>("/api/resume", payload, {
+    const { data, status } = await axios.post<Buffer>("/api/resume", payload, {
       responseType: "arraybuffer", // Ensure the response is treated as an ArrayBuffer
     });
+    if (status !== 200) {
+      setDownloadingPdf(false);
+      return;
+    }
 
     const pdfBlob = new Blob([data], { type: "application/pdf" });
     const pdfUrl = URL.createObjectURL(pdfBlob);
