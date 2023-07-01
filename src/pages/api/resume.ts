@@ -6,6 +6,8 @@ import { ResumeValidator } from "@/utils/ResumeValidator";
 const scopes = ["https://www.googleapis.com/auth/drive"];
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse<Buffer>) {
+  console.log(process.env.CLIENT_EMAIL);
+
   const auth = new google.auth.JWT(
     process.env.CLIENT_EMAIL,
     undefined,
