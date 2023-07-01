@@ -29,6 +29,21 @@ export type Project = Shared &
 export const projects: Project[] = [
   {
     type: LinkType.Link,
+    title: "Postit, Reddit Clone",
+    description:
+      "Postit is a Reddit clone built using Next.js, TypeScript, Tailwind CSS, Prisma and Redis. It is designed to help people share and discuss their interests online. With Postit, users can create and join communities, post content, and comment on other users posts.",
+    image: "Postit",
+    link: "https://postit-one.vercel.app/",
+    icons: [
+      <IconRenderer key={1} src="Typescript" alt="Typescript" height={20} />,
+      <IconRenderer key={2} src="Nextjs" alt="Nextjs" height={20} />,
+      <IconRenderer key={3} src="Tailwindcss" alt="Tailwindcss" height={20} />,
+      <IconRenderer key={5} src="Prisma" alt="Prisma" height={20} />,
+      <IconRenderer key={4} src="Redis" alt="Redis" height={20} />,
+    ],
+  },
+  {
+    type: LinkType.Link,
     title: "Gym System",
     description:
       "Lowes Workouts is a web application built using Next.js, MySQL, and Tailwind CSS. It is designed to help gym owners list and manage their workout lessons online. With Lowes Workouts, gym owners can create and schedule custom lessons, making it easy for their clients to find and sign up for the classes they want.",

@@ -17,6 +17,8 @@ import Javascript from "./javascript.svg";
 import Redux from "./redux.svg";
 import sweden from "./sweden.svg";
 import usa from "./usa-flag-1.svg";
+import Redis from "./redis.svg";
+import Prisma from "./prisma.svg";
 
 const Icons = {
   Typescript: Typescript,
@@ -36,6 +38,8 @@ const Icons = {
   Redux: Redux,
   Sweden: sweden,
   Usa: usa,
+  Redis: Redis,
+  Prisma: Prisma,
 };
 
 export type IconType = keyof typeof Icons;

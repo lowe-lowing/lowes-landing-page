@@ -1,8 +1,7 @@
 import React from "react";
-import { Title } from "../ui";
+import { DowloadCVButtons, Title } from "../ui";
 import { CVTitle, Certificate, Education, Employment } from "./components";
 import { IconRenderer } from "@/assets/icons/Icon";
-import { downloadPDF } from "@/utils/downloadPdf";
 import { Button } from "../ui/Button";
 import SectionContainer from "../ui/SectionContainer";
 
@@ -97,19 +96,7 @@ export const Career = () => {
             />
           </div>
           <div className="flex flex-col items-center">
-            <p className="text-lg text-primary">Download my full resume here:</p>
-            <div className="flex gap-2">
-              <Button onClick={() => downloadPDF("/files/Resume-Lowe-SV.pdf", "lowes_resume_sv")}>
-                <div className="flex flex-row gap-2">
-                  <IconRenderer src="Sweden" alt="Sweden" height={20} /> Swedish
-                </div>
-              </Button>
-              <Button onClick={() => downloadPDF("/files/Resume-Lowe-EN.pdf", "lowes_resume_en")}>
-                <div className="flex flex-row gap-2">
-                  <IconRenderer src="Usa" alt="Sweden" height={20} /> English
-                </div>
-              </Button>
-            </div>
+            <DowloadCVButtons />
           </div>
         </div>
       </SectionContainer>

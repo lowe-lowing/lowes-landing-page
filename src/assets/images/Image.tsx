@@ -8,6 +8,7 @@ import LowesEcommerce from "./lowes-ecommerce.png";
 import Lyricsflow from "./lyricsflow.png";
 import YoutubeSearch from "./youtube-search.png";
 import MovieApp from "./MovieApp.png";
+import Postit from "./postit.png";
 
 const Images = {
   LowesWorkouts: LowesWorkouts,
@@ -18,6 +19,7 @@ const Images = {
   Lyricsflow: Lyricsflow,
   YoutubeSearch: YoutubeSearch,
   MovieApp: MovieApp,
+  Postit: Postit,
 };
 
 export type ImageType = keyof typeof Images;
