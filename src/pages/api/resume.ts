@@ -12,7 +12,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     const auth = new google.auth.JWT(
       process.env.CLIENT_EMAIL,
       undefined,
-      process.env.PRIVATE_KEY,
+      process.env.PRIVATE_KEY!.split(String.raw`\n`).join("\n"),
       scopes
     );
     const drive = google.drive({ version: "v3", auth });
