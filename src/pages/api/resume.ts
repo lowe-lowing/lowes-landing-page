@@ -1,7 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import { google } from "googleapis";
 import type { NextApiRequest, NextApiResponse } from "next";
-import credentials from "@/credentials/credentials.json";
 import { ResumeValidator } from "@/utils/ResumeValidator";
 
 const scopes = ["https://www.googleapis.com/auth/drive"];
