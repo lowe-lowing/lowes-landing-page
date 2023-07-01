@@ -2,11 +2,11 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse<any>) {
-  const private_key = Buffer.from(process.env.PRIVATE_KEY as string, "base64").toString("utf8");
+  const private_key = process.env.PRIVATE_KEY!.replace(/\\n/g, "\n");
 
   res.json({
     name: "John Doe",
     a: process.env.CLIENT_EMAIL,
-    t: private_key,
+    w: private_key,
   });
 }
