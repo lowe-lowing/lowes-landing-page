@@ -77,8 +77,6 @@ const ButtonLoading = ({ swedish }: { swedish?: boolean }) => (
         <IconRenderer src="Usa" alt="Usa" height={20} /> English
       </>
     )}
-    <div className="w-full h-full flex items-center justify-center absolute">
-      <Loader2 className="w-6 h-6 text-gray-800 animate-spin" />
-    </div>
+    <Loader2 className="w-6 h-6 text-gray-800 animate-spin absolute inset-0 m-auto" />
   </div>
 );
