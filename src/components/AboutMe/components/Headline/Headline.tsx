@@ -16,12 +16,12 @@ export const Headline: React.FC = () => {
         <div className="job-title">
           <SplitText copy="Web Developer" role="heading" animationDelay={1.2} />
         </div>
-        <Balancer>
-          <p className="description">
+        <p className="description">
+          <Balancer>
             I am a fullstack developer based in Stockholm, Sweden with a passion for building engaging and user-friendly applications. I strive to create high-quality, functional, and visually
             appealing digital solutions that meet the needs of businesses and users.
-          </p>
-        </Balancer>
+          </Balancer>
+        </p>
       </div>
       <div className="absolute bottom-[25%] animate-fade-in">
         <DowloadCVButtons />
