@@ -3,6 +3,7 @@ import { DowloadCVButtons } from "@/components/ui";
 import Image from "next/image";
 import React from "react";
 import { SplitText } from "./components/SplittText";
+import { Balancer } from "react-wrap-balancer";
 
 export const Headline: React.FC = () => {
   return (
@@ -15,11 +16,12 @@ export const Headline: React.FC = () => {
         <div className="job-title">
           <SplitText copy="Web Developer" role="heading" animationDelay={1.2} />
         </div>
-        <p className="description">
-          I am a fullstack developer based in Stockholm, Sweden. With a passion for building
-          engaging and user-friendly applications I strive to create high-quality, functional, and
-          visually appealing digital solutions that meet the needs of businesses and users.
-        </p>
+        <Balancer>
+          <p className="description">
+            I am a fullstack developer based in Stockholm, Sweden with a passion for building engaging and user-friendly applications. I strive to create high-quality, functional, and visually
+            appealing digital solutions that meet the needs of businesses and users.
+          </p>
+        </Balancer>
       </div>
       <div className="absolute bottom-[25%] animate-fade-in">
         <DowloadCVButtons />

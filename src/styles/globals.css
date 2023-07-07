@@ -246,7 +246,7 @@ html::-webkit-scrollbar-thumb:hover {
 }
 
 .description {
-  width: 80%;
+  /* width: 80%; */
   font-weight: 400;
   font-size: 1.5em;
   color: #61DAFB;
@@ -265,7 +265,7 @@ html::-webkit-scrollbar-thumb:hover {
   }
   .description {
     font-size: 1.2em;
-    width: 90%;
+    /* width: 100%; */
   }
   /* body {
     margin-right: calc(100vw - 100%);
