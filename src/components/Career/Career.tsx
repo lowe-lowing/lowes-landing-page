@@ -27,7 +27,7 @@ export const Career = () => {
                   />
                   <Employment
                     company={"Österåkers kommun"}
-                    position={"Musiker"}
+                    position={"Musician"}
                     dateDisplay={"Juni 2020 - Juli 2020"}
                     description={
                       "Practiced about ten songs with a group in a practice room and then went around and performed the songs for about a week. It was a fun job as I got to do something that I thought was fun."
@@ -48,8 +48,6 @@ export const Career = () => {
                   place={"Täby"}
                 />
               </div>
-              {/* <div>
-              </div> */}
             </div>
             <div>
               <div className="text-xl font-bold">Skills</div>

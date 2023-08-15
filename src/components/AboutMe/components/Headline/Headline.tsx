@@ -18,8 +18,9 @@ export const Headline: React.FC = () => {
         </div>
         <p className="description">
           <Balancer>
-            I am a fullstack developer based in Stockholm, Sweden with a passion for building engaging and user-friendly applications. I strive to create high-quality, functional, and visually
-            appealing digital solutions that meet the needs of businesses and users.
+            I am a developer based in Stockholm, Sweden with a passion for building engaging and user-friendly
+            applications. I strive to create high-quality, functional, and visually appealing digital solutions that
+            meet the needs of businesses and users.
           </Balancer>
         </p>
       </div>

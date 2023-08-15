@@ -19,7 +19,7 @@ export const AboutMe: React.FC = () => {
               className="aspect-[1/1.25] object-cover rounded-lg max-sm:w-24 max-sm:float-right order-last max-sm:ml-5 max-sm:mb-2"
             />
             <div className="text-primary order-first">
-              <div className="text-2xl underline mb-2">Fullstack Developer</div>
+              <div className="text-2xl underline mb-2">Web Developer</div>
               <div>
                 {`
               Lived in Åkersberga, Stockholm, Sweden with family since 2009. Likes to keep fit and socialize with people
