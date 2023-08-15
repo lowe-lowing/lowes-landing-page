@@ -1,7 +1,6 @@
 import { IconRenderer } from "@/assets/icons/Icon";
 import { ImageType } from "@/assets/images/Image";
 import { OpenInNewTab } from "@/utils";
-import { TbBrandNextjs } from "react-icons/tb";
 
 export enum LinkType {
   Link,
@@ -29,6 +28,21 @@ export type Project = Shared &
 export const projects: Project[] = [
   {
     type: LinkType.Link,
+    title: "Taskma",
+    description:
+      "A responsive task management application created with the so-called T3 stack. In the application, you first create a workspace and then a board where you can create, drag and drop tasks for yourself and your team. In both the workspace and boards, you can invite other users and change the roles of your members.",
+    image: "Taskma",
+    link: "https://taskma.vercel.app/",
+    icons: [
+      <IconRenderer key={1} src="Typescript" alt="Typescript" height={20} />,
+      <IconRenderer key={2} src="Nextjs" alt="Nextjs" height={20} />,
+      <IconRenderer key={3} src="Tailwindcss" alt="Tailwindcss" height={20} />,
+      <IconRenderer key={4} src="Prisma" alt="Prisma" height={20} />,
+      <IconRenderer key={5} src="Trpc" alt="Trpc" height={20} />,
+    ],
+  },
+  {
+    type: LinkType.Link,
     title: "Postit, Reddit Clone",
     description:
       "Postit is a Reddit clone built using Next.js, TypeScript, Tailwind CSS, Prisma and Redis. It is designed to help people share and discuss their interests online. With Postit, users can create and join communities, post content, and comment on other users posts.",
@@ -38,8 +52,8 @@ export const projects: Project[] = [
       <IconRenderer key={1} src="Typescript" alt="Typescript" height={20} />,
       <IconRenderer key={2} src="Nextjs" alt="Nextjs" height={20} />,
       <IconRenderer key={3} src="Tailwindcss" alt="Tailwindcss" height={20} />,
-      <IconRenderer key={5} src="Prisma" alt="Prisma" height={20} />,
-      <IconRenderer key={4} src="Redis" alt="Redis" height={20} />,
+      <IconRenderer key={4} src="Prisma" alt="Prisma" height={20} />,
+      <IconRenderer key={5} src="Redis" alt="Redis" height={20} />,
     ],
   },
   {

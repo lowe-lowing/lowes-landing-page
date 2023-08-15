@@ -54,7 +54,7 @@ export const Projects: React.FC = () => {
         <div className="pb-5 pt-2">
           <div className="flex justify-center">
             <div className="flex flex-row justify-center gap-5 m-2 relative w-fit">
-              {currentPage > Math.floor(MAX_PAGES / 2) + 1 && (
+              {currentPage > Math.floor(MAX_PAGES / 2) + 1 && MAX_PAGES != 3 && (
                 <div className="absolute left-[-20px] text-secondary">...</div>
               )}
               {Array.from({ length: endPage - startPage + 1 }).map((_, index) => {
@@ -72,14 +72,19 @@ export const Projects: React.FC = () => {
                   </button>
                 );
               })}
-              {currentPage < pageNumbers.length - Math.floor(MAX_PAGES / 2) && (
+              {currentPage < pageNumbers.length - Math.floor(MAX_PAGES / 2) && MAX_PAGES != 3 && (
                 <div className="absolute right-[-20px] text-secondary">...</div>
               )}
             </div>
           </div>
           <div className="grid grid-cols-projectPagination">
-            <div className={`h-full flex items-center ${!canPrevPage ? "text-secondary" : "text-primary"}`}>
-              <button onClick={prevPage} disabled={!canPrevPage}>
+            <div
+              className={`h-full flex items-center rounded-md ml-1 ${
+                !canPrevPage ? "text-secondary" : "text-primary hover:bg-slate-700/80 cursor-pointer"
+              }`}
+              onClick={prevPage}
+            >
+              <button disabled={!canPrevPage}>
                 <IoIosArrowBack size={30} />
               </button>
             </div>
@@ -88,8 +93,13 @@ export const Projects: React.FC = () => {
                 <Card key={`${project.title}_${i}`} project={project} />
               ))}
             </div>
-            <div className={`h-full flex items-center ${!canNextPage ? "text-secondary" : "text-primary"}`}>
-              <button onClick={nextPage} disabled={!canNextPage}>
+            <div
+              className={`h-full flex items-center mr-1 rounded-md ${
+                !canNextPage ? "text-secondary" : "text-primary hover:bg-slate-700/80 cursor-pointer"
+              }`}
+              onClick={nextPage}
+            >
+              <button disabled={!canNextPage}>
                 <IoIosArrowForward size={30} />
               </button>
             </div>

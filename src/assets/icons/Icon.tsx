@@ -19,6 +19,7 @@ import sweden from "./sweden.svg";
 import usa from "./usa-flag-1.svg";
 import Redis from "./redis.svg";
 import Prisma from "./prisma.svg";
+import Trpc from "./trpc.svg";
 
 const Icons = {
   Typescript: Typescript,
@@ -40,6 +41,7 @@ const Icons = {
   Usa: usa,
   Redis: Redis,
   Prisma: Prisma,
+  Trpc: Trpc,
 };
 
 export type IconType = keyof typeof Icons;

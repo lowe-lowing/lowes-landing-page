@@ -9,6 +9,7 @@ import Lyricsflow from "./lyricsflow.png";
 import YoutubeSearch from "./youtube-search.png";
 import MovieApp from "./MovieApp.png";
 import Postit from "./postit.png";
+import Taskma from "./taskma2.png";
 
 const Images = {
   LowesWorkouts: LowesWorkouts,
@@ -20,6 +21,7 @@ const Images = {
   YoutubeSearch: YoutubeSearch,
   MovieApp: MovieApp,
   Postit: Postit,
+  Taskma: Taskma,
 };
 
 export type ImageType = keyof typeof Images;
