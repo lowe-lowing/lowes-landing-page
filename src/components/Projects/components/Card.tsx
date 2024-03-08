@@ -10,11 +10,11 @@ interface CardProps {
 
 export const Card: React.FC<CardProps> = ({ project }) => {
   return (
-    <div className="bg-slate-700 shadow-black card-shadow flex flex-col items-center p-3 gap-3 rounded-lg hover:scale-[1.02] transition-all h-min">
+    <div className="flex flex-col items-center gap-3 p-3 rounded-lg bg-slate-700 shadow-black card-shadow h-min">
       <div className="text-2xl whitespace-nowrap text-primary">{project.title}</div>
       <ImageRenderer src={project.image} alt={project.title} width={300} height={300} className="rounded-lg" />
       <div className="w-full">
-        <div className="flex flex-row gap-2 items-center bg-white w-fit p-1 rounded-lg">
+        <div className="flex flex-row items-center gap-2 p-1 bg-white rounded-lg w-fit">
           {project.icons.map((icon, i) => (
             <React.Fragment key={i}>{icon}</React.Fragment>
           ))}
@@ -23,7 +23,7 @@ export const Card: React.FC<CardProps> = ({ project }) => {
       <div className="text-sm text-primary">{project.description}</div>
       <div className="flex justify-end w-full">
         {project.type === LinkType.Link && (
-          <button className="text-primary flex items-center gap-1" onClick={() => OpenInNewTab(project.link)}>
+          <button className="flex items-center gap-1 text-primary" onClick={() => OpenInNewTab(project.link)}>
             Go to <FaArrowRight />
           </button>
         )}

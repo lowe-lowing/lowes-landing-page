@@ -34,11 +34,11 @@ export const projects: Project[] = [
     image: "Taskma",
     link: "https://taskma.vercel.app/",
     icons: [
-      <IconRenderer key={1} src="Typescript" alt="Typescript" height={20} />,
-      <IconRenderer key={2} src="Nextjs" alt="Nextjs" height={20} />,
-      <IconRenderer key={3} src="Tailwindcss" alt="Tailwindcss" height={20} />,
-      <IconRenderer key={4} src="Prisma" alt="Prisma" height={20} />,
-      <IconRenderer key={5} src="Trpc" alt="Trpc" height={20} />,
+      <IconRenderer key={1} src="Typescript" alt="Typescript" title="Typescript" height={20} />,
+      <IconRenderer key={2} src="Nextjs" alt="Nextjs" title="Nextjs" height={20} />,
+      <IconRenderer key={3} src="Tailwindcss" alt="Tailwindcss" title="Tailwindcss" height={20} />,
+      <IconRenderer key={4} src="Prisma" alt="Prisma" title="Prisma" height={20} />,
+      <IconRenderer key={5} src="Trpc" alt="Trpc" title="Trpc" height={20} />,
     ],
   },
   {
@@ -49,11 +49,11 @@ export const projects: Project[] = [
     image: "Postit",
     link: "https://postit-one.vercel.app/",
     icons: [
-      <IconRenderer key={1} src="Typescript" alt="Typescript" height={20} />,
-      <IconRenderer key={2} src="Nextjs" alt="Nextjs" height={20} />,
-      <IconRenderer key={3} src="Tailwindcss" alt="Tailwindcss" height={20} />,
-      <IconRenderer key={4} src="Prisma" alt="Prisma" height={20} />,
-      <IconRenderer key={5} src="Redis" alt="Redis" height={20} />,
+      <IconRenderer key={1} src="Typescript" alt="Typescript" title="Typescript" height={20} />,
+      <IconRenderer key={2} src="Nextjs" alt="Nextjs" title="Nextjs" height={20} />,
+      <IconRenderer key={3} src="Tailwindcss" alt="Tailwindcss" title="Tailwindcss" height={20} />,
+      <IconRenderer key={4} src="Prisma" alt="Prisma" title="Prisma" height={20} />,
+      <IconRenderer key={5} src="Redis" alt="Redis" title="Redis" height={20} />,
     ],
   },
   {
@@ -64,10 +64,10 @@ export const projects: Project[] = [
     image: "LowesWorkouts",
     link: "https://nextjs-gym-courses-app.vercel.app/",
     icons: [
-      <IconRenderer key={1} src="Typescript" alt="Typescript" height={20} />,
-      <IconRenderer key={2} src="Nextjs" alt="Nextjs" height={20} />,
-      <IconRenderer key={3} src="Mysql" alt="Mysql" height={20} />,
-      <IconRenderer key={4} src="Tailwindcss" alt="Tailwindcss" height={20} />,
+      <IconRenderer key={1} src="Typescript" alt="Typescript" title="Typescript" height={20} />,
+      <IconRenderer key={2} src="Nextjs" alt="Nextjs" title="Nextjs" height={20} />,
+      <IconRenderer key={3} src="Mysql" alt="Mysql" title="Mysql" height={20} />,
+      <IconRenderer key={4} src="Tailwindcss" alt="Tailwindcss" title="Tailwindcss" height={20} />,
     ],
   },
   {
@@ -77,23 +77,23 @@ export const projects: Project[] = [
       "An app to find driving test times in Sweden. This helps people find driving test times automatically which increases the chances of finding a time someone has abandoned. Built using Typescript, React Native, Expo, Firebase and Puppeteer. Here I learned about publishing on the app stores, send notifications to users and how to use Puppeteer to scrape data from websites.",
     image: "HittaUppkorning",
     icons: [
-      <IconRenderer key={1} src="Typescript" alt="Typescript" height={20} />,
-      <IconRenderer key={2} src="React" alt="React" height={20} />,
-      <IconRenderer key={3} src="Expo" alt="Expo" height={20} />,
-      <IconRenderer key={4} src="Firebase" alt="Firebase" height={20} />,
-      <IconRenderer key={5} src="Nodejs" alt="Nodejs" height={20} />,
+      <IconRenderer key={1} src="Typescript" alt="Typescript" title="Typescript" height={20} />,
+      <IconRenderer key={2} src="React" alt="React" title="React" height={20} />,
+      <IconRenderer key={3} src="Expo" alt="Expo" title="Expo" height={20} />,
+      <IconRenderer key={4} src="Firebase" alt="Firebase" title="Firebase" height={20} />,
+      <IconRenderer key={5} src="Nodejs" alt="Nodejs" title="Nodejs" height={20} />,
     ],
     gotoButtons: [
-      <IconRenderer
-        key={1}
-        src="AppStore"
-        alt="AppStore"
-        height={30}
-        onClick={() => OpenInNewTab("https://apple.co/3Qk1KBx")}
-      />,
+      // <IconRenderer
+      //   key={1}
+      //   src="AppStore"
+      //   alt="A title="AppStore"ppStore"
+      //   height={30}
+      //   onClick={() => OpenInNewTab("https://apple.co/3Qk1KBx")}
+      // />,
       // <IconRenderer key={1}
       //   src="GooglePlay"
-      //   alt="GooglePlay"
+      //   alt="G title="GooglePlay"ooglePlay"
       //   height={30}
       //   onClick={() => OpenInNewTab("")}
       // />,
@@ -107,11 +107,11 @@ export const projects: Project[] = [
     image: "Forum",
     link: "https://expo.dev/@luke9595/forum",
     icons: [
-      <IconRenderer key={1} src="Typescript" alt="React" height={20} />,
-      <IconRenderer key={2} src="React" alt="React" height={20} />,
-      <IconRenderer key={3} src="Expo" alt="Expo" height={20} />,
-      <IconRenderer key={4} src="Firebase" alt="Firebase" height={20} />,
-      <IconRenderer key={5} src="Nodejs" alt="Nodejs" height={20} />,
+      <IconRenderer key={1} src="Typescript" alt="React" title="Typescript" height={20} />,
+      <IconRenderer key={2} src="React" alt="React" title="React" height={20} />,
+      <IconRenderer key={3} src="Expo" alt="Expo" title="Expo" height={20} />,
+      <IconRenderer key={4} src="Firebase" alt="Firebase" title="Firebase" height={20} />,
+      <IconRenderer key={5} src="Nodejs" alt="Nodejs" title="Nodejs" height={20} />,
     ],
   },
   {
@@ -122,9 +122,9 @@ export const projects: Project[] = [
     image: "LowesEcommerce",
     link: "https://ecommerce-sanity-stripe-black.vercel.app/",
     icons: [
-      <IconRenderer key={1} src="Nextjs" alt="Nextjs" height={20} />,
-      <IconRenderer key={2} src="Sanity" alt="Sanity" height={20} />,
-      <IconRenderer key={3} src="Stripe" alt="Stripe" height={20} />,
+      <IconRenderer key={1} src="Nextjs" alt="Nextjs" title="Nextjs" height={20} />,
+      <IconRenderer key={2} src="Sanity" alt="Sanity" title="Sanity" height={20} />,
+      <IconRenderer key={3} src="Stripe" alt="Stripe" title="Stripe" height={20} />,
     ],
   },
   {
@@ -135,9 +135,9 @@ export const projects: Project[] = [
     image: "Lyricsflow",
     link: "http://lyricsflow.net/",
     icons: [
-      <IconRenderer key={1} src="Php" alt="Php" height={20} />,
-      <IconRenderer key={2} src="Javascript" alt="Javascript" height={20} />,
-      <IconRenderer key={3} src="Mysql" alt="Mysql" height={20} />,
+      <IconRenderer key={1} src="Php" alt="Php" title="Php" height={20} />,
+      <IconRenderer key={2} src="Javascript" alt="Javascript" title="Javascript" height={20} />,
+      <IconRenderer key={3} src="Mysql" alt="Mysql" title="Mysql" height={20} />,
     ],
   },
   {
@@ -148,9 +148,9 @@ export const projects: Project[] = [
     image: "YoutubeSearch",
     link: "https://crazyleaf69.github.io/YoutubeSearcher-tailwind-redux/",
     icons: [
-      <IconRenderer key={1} src="React" alt="Javascript" height={20} />,
-      <IconRenderer key={2} src="Tailwindcss" alt="Php" height={20} />,
-      <IconRenderer key={3} src="Redux" alt="Mysql" height={20} />,
+      <IconRenderer key={1} src="React" alt="Javascript" title="React" height={20} />,
+      <IconRenderer key={2} src="Tailwindcss" alt="Php" title="Tailwindcss" height={20} />,
+      <IconRenderer key={3} src="Redux" alt="Mysql" title="Redux" height={20} />,
     ],
   },
   {
@@ -161,8 +161,8 @@ export const projects: Project[] = [
     image: "MovieApp",
     link: "https://redux-movie-app-blue.vercel.app/",
     icons: [
-      <IconRenderer key={1} src="React" alt="Javascript" height={20} />,
-      <IconRenderer key={2} src="Redux" alt="Mysql" height={20} />,
+      <IconRenderer key={1} src="React" alt="Javascript" title="React" height={20} />,
+      <IconRenderer key={2} src="Redux" alt="Mysql" title="Redux" height={20} />,
     ],
   },
 ];

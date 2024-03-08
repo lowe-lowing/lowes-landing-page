@@ -1,5 +1,4 @@
 import { OpenInNewTab } from "@/utils";
-import Link from "next/link";
 import React from "react";
 
 type Props = {

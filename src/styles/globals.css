@@ -3,15 +3,15 @@
 @tailwind utilities;
 
 :root {
-  --primary-color: #61DAFB;
-  --secondary-color: #3EA99F;
-  --background-color: #0C0823;
+  --primary-color: #61dafb;
+  --secondary-color: #3ea99f;
+  --background-color: #0c0823;
+  --bg-popover: #1a1a1a;
 }
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-y: auto;
@@ -248,7 +248,7 @@ html::-webkit-scrollbar-thumb:hover {
 .description {
   font-weight: 400;
   font-size: 1.5em;
-  color: #61DAFB;
+  color: #61dafb;
   -webkit-animation: fadein 2s forwards;
   -moz-animation: fadein 2s forwards;
   -ms-animation: fadein 2s forwards;
@@ -328,7 +328,8 @@ html::-webkit-scrollbar-thumb:hover {
 /* end of headline component css */
 
 /* Navbar */
-.navbar, .animate-fade-in {
+.navbar,
+.animate-fade-in {
   -webkit-animation: fadein 2s forwards;
   -moz-animation: fadein 2s forwards;
   -ms-animation: fadein 2s forwards;
@@ -351,12 +352,12 @@ html::-webkit-scrollbar-thumb:hover {
   border-radius: 16px;
   border-width: 0 0 4px;
   box-sizing: border-box;
-  color: #FFFFFF;
+  color: #ffffff;
   cursor: pointer;
   display: inline-block;
   font-size: 15px;
   font-weight: 700;
-  letter-spacing: .8px;
+  letter-spacing: 0.8px;
   line-height: 20px;
   margin: 0;
   outline: none;
@@ -366,14 +367,14 @@ html::-webkit-scrollbar-thumb:hover {
   text-transform: uppercase;
   touch-action: manipulation;
   transform: translateZ(0);
-  transition: filter .2s;
+  transition: filter 0.2s;
   user-select: none;
   -webkit-user-select: none;
   vertical-align: middle;
   white-space: nowrap;
- }
- 
- .custom_button:after {
+}
+
+.custom_button:after {
   background-clip: padding-box;
   background-color: var(--primary-color);
   border: solid transparent;
@@ -386,27 +387,28 @@ html::-webkit-scrollbar-thumb:hover {
   right: 0;
   top: 0;
   z-index: -1;
- }
- 
- .custom_button:main, .custom_button:focus {
+}
+
+.custom_button:main,
+.custom_button:focus {
   user-select: auto;
- }
- 
- .custom_button:hover:not(:disabled) {
+}
+
+.custom_button:hover:not(:disabled) {
   filter: brightness(1.1);
- }
- 
- .custom_button:disabled {
+}
+
+.custom_button:disabled {
   cursor: auto;
- }
- 
- .custom_button:active:after {
+}
+
+.custom_button:active:after {
   border-width: 0 0 0px;
- }
- 
- .custom_button:active {
+}
+
+.custom_button:active {
   padding-bottom: 10px;
- }
+}
 /* Custom Button */
 .card-shadow {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
