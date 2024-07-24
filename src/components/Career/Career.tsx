@@ -37,7 +37,7 @@ export const Career = () => {
     <section className="flex flex-col items-center pt-10" id="Career">
       <Title>Career</Title>
       <SectionContainer>
-        <div className="p-2 text-primary">
+        <div className="p-2 sm:p-4 md:p-6 lg:p-10 text-primary">
           <div className="flex flex-col gap-10 lg:grid grid-cols-right-auto max-sm:gap-5">
             <div className="flex flex-col gap-4">
               <div>
@@ -155,7 +155,7 @@ export const Career = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center mt-4">
             <DowloadCVButtons />
           </div>
         </div>

@@ -49,7 +49,7 @@ export const Game: FC = () => {
   const changeDifficulty = (difficulty: Difficulty) => () => setGameSettings((prev) => ({ ...prev, difficulty }));
 
   return (
-    <div className="flex flex-col items-center p-2">
+    <div className="flex flex-col items-center p-2 sm:p-4 md:p-6 lg:p-10">
       <div className="flex flex-col items-center text-primary">
         <div className="text-">This is a snake game that i made within my first months of working with javascript</div>
         <div className="underline">Controls</div>

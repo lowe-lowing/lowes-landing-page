@@ -11,7 +11,7 @@ export const AboutMe: React.FC = () => {
       <div className="flex flex-col items-center">
         <Title>About Me</Title>
         <SectionContainer>
-          <div className="grid gap-5 p-2 grid-cols-right-auto max-sm:block">
+          <div className="grid gap-5 p-2 sm:p-4 md:p-6 lg:p-10 grid-cols-right-auto max-sm:block">
             <ImageRenderer
               src="CVPicture"
               alt="Picture of Me"
