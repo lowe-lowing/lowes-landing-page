@@ -49,12 +49,12 @@ export const Game: FC = () => {
   const changeDifficulty = (difficulty: Difficulty) => () => setGameSettings((prev) => ({ ...prev, difficulty }));
 
   return (
-    <>
-      <div className="text-primary flex flex-col items-center">
+    <div className="flex flex-col items-center p-2">
+      <div className="flex flex-col items-center text-primary">
         <div className="text-">This is a snake game that i made within my first months of working with javascript</div>
         <div className="underline">Controls</div>
         <div className="text-sm">Arrow keys to move</div>
-        <div className="text-sm mb-2">Esc to pause</div>
+        <div className="mb-2 text-sm">Esc to pause</div>
         <div>Highscore: {highScore}. Can you beat my highscore of 45?</div>
         <br />
       </div>
@@ -69,7 +69,7 @@ export const Game: FC = () => {
           />
         ) : (
           <div className="w-[400px] h-[400px] bg-black flex flex-col justify-center items-center">
-            <div className="bg-slate-400 flex flex-col justify-center items-center p-5 text-white">
+            <div className="flex flex-col items-center justify-center p-5 text-white bg-slate-400">
               <div className="flex flex-row gap-1">
                 <p>Difficulty:</p>
                 <button
@@ -103,7 +103,7 @@ export const Game: FC = () => {
         )}
         {game && game?.paused && (
           <div className="absolute top-0 text-white flex flex-col justify-center items-center w-[100%] h-[100%]">
-            <div className="bg-slate-400 flex flex-col justify-center items-center p-5 opacity-70">
+            <div className="flex flex-col items-center justify-center p-5 bg-slate-400 opacity-70">
               <div className="text-2xl underline">{game?.gameOver ? "Game Over" : "Paused"}</div>
               {game.gameOver ? (
                 <>
@@ -118,7 +118,7 @@ export const Game: FC = () => {
           </div>
         )}
       </div>
-    </>
+    </div>
   );
 };
 

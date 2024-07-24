@@ -11,15 +11,15 @@ export const AboutMe: React.FC = () => {
       <div className="flex flex-col items-center">
         <Title>About Me</Title>
         <SectionContainer>
-          <div className="grid grid-cols-right-auto p-10 gap-5 max-sm:p-5 max-sm:block">
+          <div className="grid gap-5 p-2 grid-cols-right-auto max-sm:block">
             <ImageRenderer
               src="CVPicture"
               alt="Picture of Me"
               width={200}
               className="aspect-[1/1.25] object-cover rounded-lg max-sm:w-24 max-sm:float-right order-last max-sm:ml-5 max-sm:mb-2"
             />
-            <div className="text-primary order-first">
-              <div className="text-2xl underline mb-2">Web Developer</div>
+            <div className="order-first text-primary">
+              <div className="mb-2 text-2xl underline">Web Developer</div>
               <div>
                 {`
               Lived in Åkersberga, Stockholm, Sweden with family since 2009. Likes to keep fit and socialize with people

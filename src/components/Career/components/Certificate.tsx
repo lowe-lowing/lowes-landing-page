@@ -10,7 +10,7 @@ type Props = {
 
 export const Certificate: React.FC<Props> = ({ title, source, date, link }) => {
   return (
-    <div className="flex flex-row gap-2 whitespace-nowrap">
+    <div className="flex flex-row flex-wrap gap-2 whitespace-nowrap">
       <div onClick={() => OpenInNewTab(link)} className="font-bold underline cursor-pointer">
         {title}
       </div>

@@ -2,13 +2,43 @@ import { DowloadCVButtons, Title } from "../ui";
 import SectionContainer from "../ui/SectionContainer";
 import { CVTitle, Certificate, Education, Employment } from "./components";
 
+const skills = [
+  "Javascript",
+  "Typescript",
+  "React",
+  "Nextjs",
+  "Tailwind",
+  "MySQL",
+  "PostgreSQL",
+  "ASP.NET 6.0",
+  "Javascript",
+  "HTML/CSS",
+  "NodeJS",
+  "React",
+  "Angular",
+  "NET",
+  "Typescript",
+  "Redux",
+  "Tailwind",
+  "Next.js",
+  "Python",
+  "Jest",
+  "Docker",
+  "Google",
+  "Cloud",
+  "Platform",
+  "Azure",
+  "AWS",
+  "CI/CD",
+];
+
 export const Career = () => {
   return (
     <section className="flex flex-col items-center pt-10" id="Career">
       <Title>Career</Title>
       <SectionContainer>
-        <div className="p-5 text-primary">
-          <div className="grid gap-10 grid-cols-right-auto max-sm:gap-5">
+        <div className="p-2 text-primary">
+          <div className="flex flex-col gap-10 lg:grid grid-cols-right-auto max-sm:gap-5">
             <div className="flex flex-col gap-4">
               <div>
                 <CVTitle title="Employments" />
@@ -67,7 +97,7 @@ export const Career = () => {
                 <div className="flex flex-col gap-2">
                   <Certificate
                     title="Microsoft Certified: Azure AI Fundamentals"
-                    source="Microsoft Certified"
+                    source="Microsoft"
                     date="June 2024"
                     link="https://learn.microsoft.com/api/credentials/share/en-us/LoweLwing-8635/C56F159686D3335E?sharingId=F25743419594C0A2"
                   />
@@ -79,7 +109,7 @@ export const Career = () => {
                   />
                   <Certificate
                     title="Microsoft Certified: Azure Fundamentals"
-                    source="Microsoft Certified"
+                    source="Microsoft"
                     date="Mars 2024"
                     link="https://learn.microsoft.com/api/credentials/share/en-us/LoweLwing-8635/7A634472776B2C5D?sharingId=F25743419594C0A2"
                   />
@@ -118,33 +148,11 @@ export const Career = () => {
             </div>
             <div>
               <div className="text-xl font-bold">Skills</div>
-              <div>Javascript</div>
-              <div>Typescript</div>
-              <div>React</div>
-              <div>Nextjs</div>
-              <div>Tailwind</div>
-              <div>MySQL</div>
-              <div>PostgreSQL</div>
-              <div>ASP.NET 6.0</div>
-              <div>Javascript</div>
-              <div>HTML/CSS</div>
-              <div>NodeJS</div>
-              <div>React</div>
-              <div>Angular</div>
-              <div>NET</div>
-              <div>Typescript</div>
-              <div>Redux</div>
-              <div>Tailwind</div>
-              <div>Next.js</div>
-              <div>Python</div>
-              <div>Jest</div>
-              <div>Docker</div>
-              <div>Google</div>
-              <div>Cloud</div>
-              <div>Platform</div>
-              <div>Azure</div>
-              <div>AWS</div>
-              <div>CI/CD</div>
+              <div className="flex flex-wrap gap-2 lg:flex-col">
+                {skills.map((skill) => (
+                  <div key={skill}>{skill}</div>
+                ))}
+              </div>
             </div>
           </div>
           <div className="flex flex-col items-center">

@@ -48,12 +48,12 @@ export const Projects: React.FC = () => {
   }, []);
 
   return (
-    <section className="flex items-center flex-col pt-10" id="Projects">
+    <section className="flex flex-col items-center pt-10" id="Projects">
       <Title>Projects</Title>
       <SectionContainer>
-        <div className="pb-5 pt-2">
+        <div className="pt-2 pb-5">
           <div className="flex justify-center">
-            <div className="flex flex-row justify-center gap-5 m-2 relative w-fit">
+            <div className="relative flex flex-row justify-center gap-5 m-2 w-fit">
               {currentPage > Math.floor(MAX_PAGES / 2) + 1 && MAX_PAGES != 3 && (
                 <div className="absolute left-[-20px] text-secondary">...</div>
               )}
@@ -88,7 +88,7 @@ export const Projects: React.FC = () => {
                 <IoIosArrowBack size={30} />
               </button>
             </div>
-            <div className="grid grid-cols-2 max-md:grid-cols-1 gap-8 m-2">
+            <div className="grid grid-cols-2 gap-8 m-2 max-md:grid-cols-1">
               {projectsToShow.map((project, i) => (
                 <Card key={`${project.title}_${i}`} project={project} />
               ))}

@@ -7,10 +7,10 @@ import { useRouter } from "next/router";
 
 export const Contact: React.FC = () => {
   return (
-    <section id="Contact" className="text-primary mt-10">
-      <footer className="flex flex-col items-center text-white bg-secondary pb-20 max-sm:pb-10">
+    <section id="Contact" className="mt-16 text-primary">
+      <footer className="flex flex-col items-center pb-20 text-white bg-secondary max-sm:pb-10">
         <Title>Contact</Title>
-        <div className="w-[50%] grid grid-cols-2 max-sm:w-[90%] flex-col max-sm:flex max-sm:gap-5">
+        <div className="container flex justify-center gap-5 px-2 max-sm:flex-col">
           <div className="flex flex-col gap-2">
             <ContactButton
               href="mailto:lowe.lowing@gmail.com"
@@ -45,9 +45,9 @@ const ContactButton: React.FC<ContactButtonProps> = ({ href, Icon, text, openInN
   return (
     <div
       onClick={() => (openInNewTab ? OpenInNewTab(href) : router.push(href))}
-      className="flex items-center gap-2 w-fit cursor-pointer"
+      className="flex items-center gap-2 cursor-pointer w-fit"
     >
-      <div className="rounded-full border-red-400 border w-fit p-2">{Icon}</div> {text}
+      <div className="p-2 border border-red-400 rounded-full w-fit">{Icon}</div> {text}
     </div>
   );
 };
