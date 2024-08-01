@@ -54,7 +54,7 @@ export const Career = () => {
                     company="QTE Development"
                     position="Fullstack Junior Developer"
                     dateDisplay="Februari 2023 - April 2023"
-                    description="During 3 months I got to learn a lot that I had never used before, such as working more with github and setting up a professional development environment. I was both thrown into an existing project and had to start a new project where I developed my experiences in postgresql, typescript and nestjs, etc."
+                    description="During the 3 months I got to learn about technologies that I would never use on my own, such as working more with github and setting up a professional development environment. I was both thrown into an existing project and had to start a new project where I developed my experiences in postgresql, typescript and nestjs, etc."
                     place="Stockholm"
                   />
                 </div>
