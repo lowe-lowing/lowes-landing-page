@@ -53,7 +53,7 @@ export const Career = () => {
                   <Employment
                     company="QTE Development"
                     position="Fullstack Junior Developer"
-                    dateDisplay="Februari 2023 - April 2023"
+                    dateDisplay="February 2023 - April 2023"
                     description="During the 3 months I got to learn about technologies that I would never use on my own, such as working more with github and setting up a professional development environment. I was both thrown into an existing project and had to start a new project where I developed my experiences in postgresql, typescript and nestjs, etc."
                     place="Stockholm"
                   />
@@ -63,38 +63,44 @@ export const Career = () => {
                 <CVTitle title="Education" />
                 <div className="space-y-2">
                   <Education
-                    school="Åva Gymnasium"
-                    degree="Tech"
-                    dateDisplay="Augusti 2019 - Juni 2022"
-                    description="During my high school years, I developed a great interest in programming and was often ahead of the curve in courses such as Programming, Web Development and Web Server Programming."
-                    place="Täby"
-                  />
-                  <Education
                     school="Medieinstitutet"
                     degree="Mjukvarutestning"
                     dateDisplay="April 2024 - June 2024"
-                    description=""
+                    description="A very educational course where I learned how to test applications using Jest and Cypress."
                     place="Remote"
                   />
                   <Education
                     school="IT-Högskolan"
                     degree="Devops"
                     dateDisplay="April 2024 - June 2024"
-                    description=""
+                    description="A course about Devops and Azure. I learned how to set up a CI/CD pipeline and how to work with Azure."
                     place="Remote"
                   />
                   <Education
                     school="Blekinge Tekniska Högskolan"
-                    degree="Smart industri: automation och artificiell intelligens inom industri 4.0"
+                    degree="Smart industry: automation and artificial intelligence in Industry 4.0"
                     dateDisplay="January 2024 - June 2024"
-                    description=""
+                    description="During the course, I learned about machine learning, neural networks, and how to use Python to build solutions with the help of AI."
                     place="Remote"
+                  />
+                  <Education
+                    school="Åva Gymnasium"
+                    degree="Tech"
+                    dateDisplay="August 2019 - June 2022"
+                    description="During my high school years, I developed a great interest in programming and was often ahead of the curve in courses such as Programming, Web Development and Web Server Programming."
+                    place="Täby"
                   />
                 </div>
               </div>
               <div>
                 <CVTitle title="Certificates" />
                 <div className="flex flex-col gap-2">
+                  <Certificate
+                    title="Microsoft Certified: Azure Developer Associate"
+                    source="Microsoft"
+                    date="August 2024"
+                    link="https://learn.microsoft.com/api/credentials/share/en-us/LoweLwing-8635/2237645445B97139?sharingId=F25743419594C0A2"
+                  />
                   <Certificate
                     title="Microsoft Certified: Azure AI Fundamentals"
                     source="Microsoft"
